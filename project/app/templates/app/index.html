@@ -7,4 +7,9 @@
             <li>app {{ app.id }}: {{ app.compra }} R$ {{ app.preco}}</li>
         {% endfor %}
     </ul>
+    <ul>
+        {% for compra in compra %}
+            <li>compra {{ compra.id }}: {{ .compra }} R$ {{ app.preco}}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
