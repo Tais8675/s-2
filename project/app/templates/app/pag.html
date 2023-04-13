@@ -1,0 +1,22 @@
+{% extends "app/layout.html" %}
+
+{% block body %}
+    <h1>app {{ app.id }}</h1>
+    <ul>
+        <li>compra: {{ app.compra }}</li>
+        <li>preco: {{ app.preco }} </li>
+    </ul>
+    <a href="{% url 'index' %}">All app</a>
+{% endblock %}
+
+
+{% extends "app/layout.html" %}
+
+{% block body %}
+    <h1>app:</h1>
+    <ul>
+        {% for app in app %}
+            <li><a href="{% url 'app' app.id %}">app {{ app.id }}</a>: {{ app.compra }} to {{ app.preco }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

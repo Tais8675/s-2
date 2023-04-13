@@ -1,0 +1,10 @@
+{% extends "app/layout.html" %}
+
+{% block body %}
+    <h1>app:</h1>
+    <ul>
+        {% for app in app %}
+            <li>app {{ app.id }}: {{ app.compra }} R$ {{ app.preco}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
