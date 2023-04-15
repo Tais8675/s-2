@@ -6,3 +6,4 @@ urlpatterns = [
     path("<int:app_id>", views.app, name="app"),
     
 ]
+

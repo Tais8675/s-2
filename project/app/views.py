@@ -9,7 +9,7 @@ def index(request):
     })
 
 def app(request, app_id):
-    app = app.objects.get(id=app)
+    app = App.objects.get(id=app_id)
     return render(request, "app/pag.html", {
         "app": App
     })
