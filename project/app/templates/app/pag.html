@@ -15,6 +15,15 @@
             <li><a href="{% url 'app' app.id %}">app {{ app.id }}</a>: {{ app.compra }} to {{ app.preco }}</li>
         {% endfor %}
     </ul>
+
+
+    <h1>Compras {{ app.id }}</h1>
+    <ul>
+        <li>compra: {{ app.compra }}</li>
+        <li>preco: {{ app.preco }} </li>
+    </ul>
+    <a href="{% url 'index' %}">All Compras</a>
+
 {% endblock %}
 
 
