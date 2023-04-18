@@ -1,3 +1,6 @@
+
+from audioop import reverse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .models import App, Lista
 
@@ -9,7 +12,10 @@ def index(request):
     })
 
 def app(request, app_id):
-    app = App.objects.get(id=app_id)
+    compra = App.objects.get(id=app_id)
+  
     return render(request, "app/pag.html", {
-        "app": App
+        "App": compra
+      
     })
+ 
