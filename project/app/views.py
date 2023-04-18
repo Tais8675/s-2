@@ -13,9 +13,9 @@ def index(request):
 
 def app(request, app_id):
     compra = App.objects.get(id=app_id)
-  
+    print(compra)
     return render(request, "app/pag.html", {
-        "App": compra
+        "app": compra
       
     })
  

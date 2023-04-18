@@ -5,14 +5,10 @@
     <ul>
         <li>compra: {{ app.compra }}</li>
         <li>preco: {{ app.preco }} </li>
-        #######
+        
     </ul>
-    <a href="{% url 'index' %}">All app</a>
-    <ul>
-        {% for app in app %}
-            <li><a href="{% url 'app' app.id %}">app {{ app.id }}</a>: {{ app.compra }} to {{ app.preco }}</li>
-        {% endfor %}
-    </ul>
+    <a href="{% url 'index' %}">Pagina inicial</a>
+
 
 
 {% endblock %}
