@@ -4,6 +4,5 @@ from .models import  App, Lista
 
 admin.site.register(Lista)
 admin.site.register(App)
-#admin.site.register(Compra)
 
 

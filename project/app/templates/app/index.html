@@ -5,7 +5,7 @@
     <ul>
         {% for app in app %}
             <!-- <li>app {{ app.id }}: R$ {{ app.preco}}</li> -->
-            <li><a href="{% url 'app' app.id %}">App {{ app.id }}</a>: {{ app.compra }} R$ {{ app.preco }}</li>
+            <li><a href="{% url 'app' app.id %}">item {{ app.id }}</a>: {{ app.compra }} R$ {{ app.preco }}</li>
         {% endfor %}
     </ul>
     <ul>
@@ -14,4 +14,3 @@
         {% endfor %}
     </ul>
 {% endblock %}
-

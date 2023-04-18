@@ -16,6 +16,6 @@ def app(request, app_id):
     print(compra)
     return render(request, "app/pag.html", {
         "app": compra
+        
       
     })
- 
