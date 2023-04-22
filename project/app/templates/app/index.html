@@ -1,16 +1,66 @@
 {% extends "app/layout.html" %}
 
 {% block body %}
-    <h1>compras:</h1>
+
+
+    
     <ul>
+        
+        <button>
+            <a href="logar">login</a>
+            
+        </button>
+        
+        <button>
+            <a href="cadastro">cadastro</a>
+        </button>
+        <h5>
+            Faça login ou cadastra-se para cadastrar listas e produtos!
+        </h5>
+        
+    
+        <button>
+            <a href="admin">cadastrar listas e produtos</a>
+        </button>
+
+        <br>
+        <img src="https://cdn-icons-png.flaticon.com/512/3594/3594363.png" alt=" "width="100px">
+    <h1>compras:</h1>
         {% for app in app %}
             <!-- <li>app {{ app.id }}: R$ {{ app.preco}}</li> -->
-            <li><a href="{% url 'app' app.id %}">item {{ app.id }}</a>: {{ app.compra }} R$ {{ app.preco }}</li>
+            <li><a href="{% url 'app' app.id %}">item {{ app.id }}</a>: {{ app.compra }} R$ {{ app.preco }} <br> -Lista {{ app.lista }} <p></p></li>
         {% endfor %}
     </ul>
     <ul>
-        {% for compra in compra %}
-            <li>compra {{ compra.id }}: {{ .compra }} R$ {{ app.preco}}</li>
+        {% for app in app %}
+        
+            <h4>Soma dos preços dos produtos na lista {{ app.lista }}</h4>
+            <p>Preço total: R$ {{ preco_total }}</p>
         {% endfor %}
     </ul>
+    
+    <style>
+        button {
+	                font-size: 14px;
+	                font-weight: bold;
+	                color: #fff;
+	                background-color: #4af3bb;
+	                border: none;
+	                padding: 5px 10px;
+	                border-radius: 5px;
+	                cursor: pointer;
+	                margin: 0 5px;
+	            }
+
+   </style>
+
+   <style>
+
+    img {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+}
+   </style>
+   
 {% endblock %}
