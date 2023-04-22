@@ -35,10 +35,11 @@
         {% for app in app %}
         
             <h4>Soma dos preços dos produtos na lista {{ app.lista }}</h4>
-            <p>Preço total: R$ {{ preco_total }}</p>
+            <p>Preço Total: R$ {{ app.lista.total }}</p>
         {% endfor %}
     </ul>
-    
+
+
     <style>
         button {
 	                font-size: 14px;

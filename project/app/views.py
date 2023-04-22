@@ -10,6 +10,15 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+def lista(request):
+    context = {}
+    context['app'] = App.objects.all()
+
+    for app in context['app']:
+        app.preco_total = sum(item.preco for item in app.lista.app_set.all())
+
+    return render(request, 'app/app.html', context)
+
 def index(request):
     return render(request, "app/index.html", {
         "app": App.objects.all()
